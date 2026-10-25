@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071a3d">
+<title>الأمن السيبراني | ابتدائية العرفاء</title>
+<style>
+:root{--navy:#071a3d;--blue:#1459c7;--cyan:#43d9f5;--ice:#eff7ff;--ink:#102347;--muted:#61718d;--white:#fff;--gold:#ffd166}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f4f8ff;color:var(--ink);line-height:1.8}
+a{color:inherit}.topbar{background:#06132d;color:#dceaff;padding:10px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem}
+header{background:linear-gradient(120deg,#071a3d,#0c3478 65%,#087fba);color:white;position:relative;overflow:hidden}
+nav{max-width:1120px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:12px;font-weight:bold}.logo{width:48px;height:48px;border-radius:16px;background:#ffffff18;border:1px solid #ffffff55;display:grid;place-items:center;font-size:26px}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}.navlinks a{text-decoration:none;color:#e5f4ff}.hero{max-width:1120px;margin:auto;padding:46px 22px 76px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#ffffff16;border:1px solid #ffffff3d;border-radius:99px;padding:5px 14px;font-size:.9rem;color:#c8f7ff}
+h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.25;margin:18px 0 12px}.hero p{font-size:1.12rem;color:#d7e8ff;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;border-radius:14px;padding:12px 20px;font-size:1rem;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.primary{background:var(--cyan);color:#06214a}.ghost{border:1px solid #ffffff77;color:white;background:#ffffff12}.bluebtn{background:var(--blue);color:white}.lightbtn{background:#e8f2ff;color:#15458f}
+.hero-art{min-height:300px;display:grid;place-items:center;position:relative}.shield{width:min(290px,70vw);aspect-ratio:1;display:grid;place-items:center;position:relative;filter:drop-shadow(0 20px 35px #00102b80)}
+.shield svg{width:100%;height:100%}.orbit{position:absolute;border:1px dashed #8ceeff80;border-radius:50%;width:340px;height:340px;animation:spin 28s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:48px;height:48px;border-radius:15px;background:#ffffff18;border:1px solid #ffffff66;display:grid;place-items:center}.orbit:before{top:32px;right:36px}.orbit:after{bottom:25px;left:25px}
+@keyframes spin{to{transform:rotate(360deg)}}.floating{position:absolute;background:#fff;color:#14346a;padding:10px 14px;border-radius:14px;box-shadow:0 10px 25px #00102b35;font-weight:bold}.f1{top:22px;left:0}.f2{bottom:26px;right:0}
+main{max-width:1120px;margin:-26px auto 0;padding:0 22px 50px;position:relative;z-index:2}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{background:white;border:1px solid #e1ebfa;border-radius:18px;padding:18px;box-shadow:0 8px 24px #173c7410;text-align:center}.stat strong{display:block;font-size:1.15rem;color:#1254b3}.stat span{font-size:.9rem;color:var(--muted)}
+section{padding-top:48px}.section-head{text-align:center;max-width:700px;margin:0 auto 24px}.section-head .tag{color:#1261bd;font-weight:bold}.section-head h2{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.4;margin:5px 0}.section-head p{color:var(--muted);margin:6px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid #e1ebfa;border-radius:20px;padding:22px;box-shadow:0 8px 24px #173c740a}.card .emoji{width:54px;height:54px;border-radius:17px;background:#eaf4ff;display:grid;place-items:center;font-size:28px}.card h3{margin:12px 0 4px}.card p{color:var(--muted);margin:0;font-size:.96rem}
+.quizbox{background:white;border:1px solid #dce8fa;border-radius:24px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 35px #143d7410;max-width:850px;margin:auto}.quiztop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}.progress{height:8px;background:#e8effa;border-radius:99px;overflow:hidden;margin:12px 0 25px}.progress div{height:100%;width:0;background:linear-gradient(90deg,#1761d1,#43d9f5);transition:width .25s}.question{font-size:1.25rem;font-weight:bold;margin:12px 0 20px}.answers{display:grid;gap:10px}.answer{padding:13px 16px;text-align:right;background:#f7faff;border:1px solid #dce8fa;border-radius:13px;cursor:pointer;font:inherit;color:var(--ink)}.answer:hover{border-color:#4287e7;background:#edf5ff}.answer.correct{background:#e5f9ee;border-color:#51bd82}.answer.wrong{background:#fff0f0;border-color:#e48b8b}.feedback{min-height:32px;font-weight:bold;margin:12px 0}.quizactions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.result{display:none;text-align:center;padding:20px}.result .big{font-size:3rem}
+.certificate-wrap{max-width:850px;margin:auto}.certificate{background:linear-gradient(145deg,#fff,#f3f8ff);border:7px double #1d5db4;border-radius:22px;padding:30px;text-align:center;position:relative;overflow:hidden}.certificate:before{content:"✦";position:absolute;font-size:180px;color:#1d5db408;top:-60px;left:20px}.cert-mark{font-size:42px}.certificate h3{font-size:1.8rem;color:#124b9b;margin:5px}.certificate p{margin:5px}.name-input{width:min(100%,400px);padding:12px 14px;border:1px solid #cad9ed;border-radius:12px;font:inherit;margin:14px 0}.cert-name{font-size:1.4rem;font-weight:bold;color:#0d3d84;margin:10px}
+.notice{background:#e8f6ff;border-right:5px solid #1497d4;border-radius:14px;padding:15px 18px;color:#12436c;margin-top:20px}
+footer{background:#06132d;color:#dceaff;padding:28px 22px;text-align:center}footer strong{color:#8ceeff}footer p{margin:4px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px;text-align:center}.hero p{margin-inline:auto}.actions{justify-content:center}.hero-art{min-height:260px}.orbit{width:270px;height:270px}.cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.navlinks{display:none}.f1{left:5%}.f2{right:3%}.stat{padding:12px}}
+@media print{body{background:white}.topbar,nav,.hero,main>section:not(#certificate),footer,.certificate-wrap form,.printbtn{display:none!important}main{margin:0;padding:0}.certificate{box-shadow:none;min-height:90vh;display:flex;flex-direction:column;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>🛡️ أسبوع التوعية بالأمن السيبراني</span><span>ابتدائية العرفاء · معًا لبيئة رقمية آمنة</span></div>
+<header>
+<nav><div class="brand"><div class="logo">🛡️</div><div>ابتدائية العرفاء<br><small style="font-weight:normal;color:#c7e8ff">الأمن السيبراني</small></div></div>
+<div class="navlinks"><a href="#tips">نصائح الأمان</a><a href="#quiz">المسابقة</a><a href="#certificate">الشهادة</a></div></nav>
+<div class="hero">
+<div><span class="eyebrow">🔐 كن واعيًا… كن آمنًا</span><h1>الأمن السيبراني<br><span style="color:#66e8ff">وعينا أماننا</span></h1>
+<p>رحلة ممتعة نتعلّم فيها كيف نحمي معلوماتنا، ونستخدم الإنترنت بذكاء وأمان. هل أنت مستعد لتكون بطل الأمن الرقمي؟</p>
+<div class="actions"><a class="btn primary" href="#quiz">🏆 ابدأ المسابقة</a><a class="btn ghost" href="#tips">اكتشف نصائح الأمان ↓</a></div></div>
+<div class="hero-art"><div class="orbit"></div><div class="shield">
+<svg viewBox="0 0 240 270" role="img" aria-label="درع حماية رقمي"><defs><linearGradient id="sg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#6ef0ff"/><stop offset="1" stop-color="#2673e8"/></linearGradient></defs><path d="M120 10 L215 45 V115 C215 178 176 225 120 258 C64 225 25 178 25 115 V45 Z" fill="url(#sg)" stroke="#d9fbff" stroke-width="4"/><path d="M120 30 L195 58 V115 C195 165 165 202 120 230 C75 202 45 165 45 115 V58 Z" fill="#092958" opacity=".93"/><rect x="82" y="110" width="76" height="60" rx="12" fill="#ecfbff"/><path d="M96 110 V88 a24 24 0 0 1 48 0 v22" fill="none" stroke="#ecfbff" stroke-width="12" stroke-linecap="round"/><circle cx="120" cy="134" r="7" fill="#1459c7"/><path d="M120 140 V151" stroke="#1459c7" stroke-width="6" stroke-linecap="round"/></svg></div><div class="floating f1">🔒 بياناتك أمانة</div><div class="floating f2">✨ بطل رقمي</div></div>
+</div></header>
+<main>
+<div class="stats"><div class="stat"><strong>🔐 احمِ بياناتك</strong><span>كلمات المرور معلومات خاصة</span></div><div class="stat"><strong>🔎 فكّر قبل النقر</strong><span>تأكد من الرابط قبل فتحه</span></div><div class="stat"><strong>🙋 اطلب المساعدة</strong><span>أخبر شخصًا بالغًا تثق به</span></div></div>
+<section id="tips"><div class="section-head"><div class="tag">خطوات بسيطة تحميك</div><h2>كن بطلًا في العالم الرقمي 🦸</h2><p>تذكّر هذه القواعد الذهبية كلما استخدمت الإنترنت.</p></div>
+<div class="cards">
+<div class="card"><div class="emoji">🔗</div><h3>لا تفتح رابطًا مجهولًا</h3><p>إذا وصلك رابط غريب، لا تضغط عليه. اسأل معلمك أو ولي أمرك أولًا.</p></div>
+<div class="card"><div class="emoji">🔑</div><h3>حافظ على كلمة المرور</h3><p>لا تشارك كلمة المرور مع الأصدقاء، واطلب مساعدة أهلك لإنشاء كلمة قوية.</p></div>
+<div class="card"><div class="emoji">🤝</div><h3>كن لطيفًا واطلب المساعدة</h3><p>لا ترسل معلوماتك الشخصية، وإذا أزعجك شيء على الإنترنت فأخبر شخصًا بالغًا تثق به.</p></div>
+</div></section>
+<section id="quiz"><div class="section-head"><div class="tag">اختبر معلوماتك</div><h2>مسابقة بطل الأمن السيبراني 🏆</h2><p>أجب عن الأسئلة القصيرة، واجمع النقاط لتستحق شهادة بطل الأمن الرقمي.</p></div>
+<div class="quizbox"><div id="quizplay"><div class="quiztop"><span id="qcount">السؤال 1 من 5</span><span id="score">النقاط: 0</span></div><div class="progress"><div id="progress"></div></div><div class="question" id="question"></div><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="quizactions"><span style="color:#61718d;font-size:.9rem">اختر إجابة واحدة</span><button class="btn bluebtn" id="next" disabled>السؤال التالي ←</button></div></div>
+<div class="result" id="result"><div class="big">🏅</div><h2 id="resultTitle">أحسنت يا بطل!</h2><p id="resultText"></p><button class="btn bluebtn" id="certlink">احصل على شهادتك 🎓</button> <button class="btn lightbtn" id="retry">أعد المسابقة ↻</button></div></div></section>
+<section id="certificate"><div class="section-head"><div class="tag">تكريم الأبطال</div><h2>شهادة بطل الأمن الرقمي 🎓</h2><p>أكمل المسابقة، ثم اكتب اسمك لإعداد شهادة تقدير قابلة للطباعة.</p></div>
+<div class="certificate-wrap"><form id="certform" style="text-align:center"><input class="name-input" id="studentName" maxlength="60" placeholder="اكتب اسم الطالب هنا" aria-label="اسم الطالب" required><button class="btn bluebtn" type="submit">جهّز الشهادة</button></form>
+<div class="certificate" id="certificateCard" style="display:none"><div class="cert-mark">🛡️✨🛡️</div><p style="color:#53709b;font-weight:bold">ابتدائية العرفاء</p><h3>شهادة بطل الأمن السيبراني</h3><p>تُمنح هذه الشهادة للطالب/ـة</p><div class="cert-name" id="printedName"></div><p>لإتمامه مسابقة الأمن السيبراني وإظهار وعيه بأهمية حماية المعلومات والاستخدام الآمن للإنترنت.</p><p style="font-size:1.15rem;color:#1559ad;font-weight:bold;margin-top:12px">🌟 كن واعيًا… كن آمنًا 🌟</p><div style="display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-top:26px;text-align:center"><p>مدير المدرسة<br>____________</p><p>الموجه الطلابي<br><strong>منصور الغنامي</strong></p></div><p style="font-size:.8rem;color:#61718d;margin-top:18px">الأمن السيبراني… وعينا أماننا</p></div>
+<div style="text-align:center;margin-top:16px"><button class="btn bluebtn printbtn" id="printCert" style="display:none">🖨️ اطبع الشهادة</button></div></div>
+<div class="notice">💡 <strong>تذكّر:</strong> لا تشارك كلمة المرور أو معلوماتك الخاصة مع أي شخص عبر الإنترنت، وإذا شعرت بالقلق فاطلب مساعدة شخص بالغ تثق به.</div>
+</section></main>
+<footer><p><strong>ابتدائية العرفاء</strong></p><p>مع تحيات الموجه الطلابي <strong>منصور الغنامي</strong></p><p style="font-size:.85rem;color:#9fb6d8;margin-top:10px">🛡️ معًا نبني جيلًا واعيًا وآمنًا رقميًا</p></footer>
+<script>
+const questions=[
+{q:"وصلك رابط من شخص لا تعرفه ويطلب منك الضغط عليه. ماذا تفعل؟",a:["أفتحه بسرعة","أرسله إلى أصدقائي","لا أفتحه وأسأل شخصًا بالغًا أثق به"],c:2,why:"أحسنت! الروابط المجهولة قد تكون غير آمنة."},
+{q:"طلب منك صديقك كلمة المرور الخاصة بحسابك. ما التصرف الصحيح؟",a:["أعطيه إياها","أحتفظ بها سرية ولا أشاركها","أنشرها في مجموعة الصف"],c:1,why:"صحيح! كلمة المرور سرية ويجب حمايتها."},
+{q:"إذا رأيت رسالة غريبة أو مخيفة على الإنترنت، ماذا تفعل؟",a:["أخبر ولي أمري أو معلمي","أرد على المرسل بمعلوماتي","أتجاهل الأمر دائمًا حتى لو شعرت بالخوف"],c:0,why:"رائع! طلب المساعدة من شخص بالغ موثوق هو التصرف الصحيح."},
+{q:"أيّ من هذه المعلومات يجب أن تحافظ على خصوصيتها؟",a:["لونك المفضل فقط","عنوان المنزل وكلمات المرور","اسم حيوانك الكرتوني المفضل"],c:1,why:"صحيح! معلوماتك الشخصية وكلمات المرور يجب أن تبقى آمنة."},
+{q:"ما أفضل طريقة للتصرف عند استخدام الإنترنت؟",a:["أضغط على كل إعلان","أشارك صوري ومعلوماتي مع الجميع","أفكر قبل النقر وأستخدم الإنترنت بأمان"],c:2,why:"أحسنت! فكّر قبل النقر، وحافظ على خصوصيتك."}
+];
+let index=0,score=0,answered=false;
+const $=id=>document.getElementById(id);
+function render(){answered=false;$("qcount").textContent=`السؤال ${index+1} من ${questions.length}`;$("score").textContent=`النقاط: ${score}`;$("progress").style.width=`${index/questions.length*100}%`;$("question").textContent=questions[index].q;$("answers").innerHTML="";$("feedback").textContent="";$("next").disabled=true;questions[index].a.forEach((a,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=a;b.onclick=()=>choose(i,b);$("answers").appendChild(b)});$("next").textContent=index===questions.length-1?"عرض النتيجة 🏆":"السؤال التالي ←"}
+function choose(i,button){if(answered)return;answered=true;const q=questions[index];[...$("answers").children].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.classList.add("correct")});if(i===q.c){score++;button.classList.add("correct");$("feedback").textContent="✅ إجابة صحيحة! "+q.why;$("feedback").style.color="#147844"}else{button.classList.add("wrong");$("feedback").textContent="💡 "+q.why;$("feedback").style.color="#9b4c15"}$("score").textContent=`النقاط: ${score}`;$("progress").style.width=`${(index+1)/questions.length*100}%`;$("next").disabled=false}
+$("next").onclick=()=>{if(!answered)return;if(index<questions.length-1){index++;render()}else{$("quizplay").style.display="none";$("result").style.display="block";$("resultTitle").textContent=score>=4?"أحسنت يا بطل الأمن الرقمي! 🌟":"عمل رائع! واصل التعلّم 💙";$("resultText").textContent=`حصلت على ${score} من ${questions.length} نقاط. يمكنك مراجعة النصائح وإعادة المحاولة متى شئت.`;window.lastScore=score}};
+$("retry").onclick=()=>{index=0;score=0;$("result").style.display="none";$("quizplay").style.display="block";render()};
+$("certlink").onclick=()=>{document.getElementById("certificate").scrollIntoView({behavior:"smooth"});$("studentName").focus()};
+$("certform").onsubmit=e=>{e.preventDefault();const name=$("studentName").value.trim();if(!name)return;$("printedName").textContent=name;$("certificateCard").style.display="block";$("printCert").style.display="inline-flex";$("certificateCard").scrollIntoView({behavior:"smooth",block:"center"})};
+$("printCert").onclick=()=>window.print();
+render();
+</script>
+</body></html>
